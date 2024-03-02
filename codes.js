@@ -33,15 +33,14 @@ function countAndPrint(num) {
 
 ///226
 function foo1(num) {
-    if (typeof num !== 'number') {
-        console.log('wrong');
-        return;
-    }
-
-    num = num.toString();
-    let reversedDigits = '';
-    for (let i = num.length - 1; i >= 0; i--) {
-        reversedDigits += num[i];
-    }
-    return +reversedDigits;
+  if (typeof num !== "number") {
+    console.log("wrong");
+    return;
+  }
+  num = num.toString();
+  let reversed = "";
+  for (let i = num.length - 1; i >= 0; i--) {
+    reversed += num[i];
+  }
+  return +reversed;
 }
