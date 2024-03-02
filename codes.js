@@ -29,3 +29,19 @@ function countAndPrint(num) {
     multiply: multiply,
   };
 }
+
+
+///226
+function foo1(num) {
+    if (typeof num !== 'number') {
+        console.log('wrong');
+        return;
+    }
+
+    num = num.toString();
+    let reversedDigits = '';
+    for (let i = num.length - 1; i >= 0; i--) {
+        reversedDigits += num[i];
+    }
+    return +reversedDigits;
+}
