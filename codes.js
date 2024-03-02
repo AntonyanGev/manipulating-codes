@@ -57,3 +57,37 @@ function check(num) {
     return false;
   }
 }
+
+
+//228
+
+function check(num) {
+  if (typeof num !== "number") {
+    return "Please input a number";
+  }
+  const toStr= num.toString();
+
+  for (let i = 0; i < toStr.length - 1; i++) {
+    if (toStr[i] === toStr[i + 1]) {
+      return "is equal";
+    }
+  }
+ return "is not equal";
+}
+
+//229
+
+function foo1(num) {
+  if (typeof num !== "number") {
+    return "please input a number";
+  }
+
+  let result = num.toString();
+  result = result.split("");
+  for (let i = 0; i < result.length; i++) {
+    if (result[i] % 2 !== 0) {
+      return true;
+    }
+  }
+  return false;
+}
