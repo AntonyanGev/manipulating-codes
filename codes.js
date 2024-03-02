@@ -1,3 +1,5 @@
+
+//221-225 solutions in one function
 function countAndPrint(num) {
   if (typeof num !== "number") {
     console.log(" Dear user please input a number");
@@ -91,3 +93,46 @@ function foo1(num) {
   }
   return false;
 }
+
+//230
+
+
+function callBack(odd, even) {
+  let arr = odd.reduce((sum, item) => {
+    return (sum += item);
+  }, 0);
+
+  let arr2 = even.reduce((sum, item) => {
+    return (sum += item);
+  }, 0);
+
+  let result = arr.toString();
+  let result1 = arr2.toString();
+  if (result == result1) {
+    return true;
+  }
+  return false;
+}
+
+
+
+function checkEquality(num) {
+  if (typeof num !== "number") {
+    return "введите число";
+  }
+
+  let result = num.toString();
+  result = result.split("");
+  let odd = [];
+  let even = [];
+
+  for (let i = 0; i < result.length; i++) {
+    if (result[i] % 2 !== 0) {
+      odd.push(Number(result[i]));
+    } else {
+      even.push(Number(result[i]));
+    }
+  }
+  return callBack(odd, even);
+}
+
