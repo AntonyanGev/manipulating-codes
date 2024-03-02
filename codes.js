@@ -44,3 +44,16 @@ function foo1(num) {
   }
   return +reversed;
 }
+
+///227
+function check(num) {
+  if (typeof num !== "number") {
+    return "please input a number";
+  }
+  num = num.toString();
+  if (num.includes(2)) {
+    return true;
+  } else {
+    return false;
+  }
+}
