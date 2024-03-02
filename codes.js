@@ -118,7 +118,7 @@ function callBack(odd, even) {
 
 function checkEquality(num) {
   if (typeof num !== "number") {
-    return "введите число";
+    return "please input a number";
   }
 
   let result = num.toString();
