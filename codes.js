@@ -1,6 +1,6 @@
 function countAndPrint(num) {
   if (typeof num !== "number") {
-    console.log("please enter a number");
+    console.log(" Dear user please input a number");
     return;
   }
   let res = num.toString();
@@ -24,7 +24,7 @@ function countAndPrint(num) {
   console.log(reversed);
 
   return {
-    count,
+    numOfElements: count,
     sum: sum,
     multiply: multiply,
   };
