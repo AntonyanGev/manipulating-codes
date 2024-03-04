@@ -5,80 +5,13 @@ function countAndPrint(num) {
     console.log(" Dear user please input a number");
     return;
   }
+     if(num % 1 >= 0.5){
+         num= Math.round(num)
+     } else{
+         num=Math.floor(num)
+     }
+     
   let res = num.toString();
-  let result = res.split("");
-  let count = 0;
-  let sum = 0;
-  let multiply = 1;
-  let reversed = [];
-  let normal = [];
-  for (let i = 0; i < result.length; i++) {
-    count++;
-    sum = sum + Number(result[i]);
-    multiply *= Number(result[i]);
-    normal.push(result[i]);
-    reversed.push(result.at(-1 - i));
-  }
-
-  normal = normal.toString();
-  reversed = reversed.toString();
-  console.log(normal);
-  console.log(reversed);
-
-  return {
-    numOfElements: count,
-    sum: sum,
-    multiply: multiply,
-  };
-}
-///second solution
-
-function countAndPrint(num) {
-  if (typeof num !== "number") {
-    console.log(" Dear user please input a number");
-    return;
-  }
-  let res = num.toString();
-  let result = res.split("");
-  let count = 0;
-  let sum = 0;
-  let multiply = 1;
-  let reversed = [];
-  let normal = [];
-  for (let i = 0; i < result.length; i++) {
-      if(!isNaN(result[i])){
-    count++;
-    sum = sum + parseInt(result[i]);
-    multiply *= parseInt(result[i]);
-    normal.push(result[i]);
-    reversed.push(result.at(-1 - i));
-  }
-  }
-
-  normal = normal.toString();
-  reversed = reversed.toString();
-  console.log(normal);
-  console.log(reversed);
-
-  return {
-    numOfElements: count,
-    sum: sum,
-    multiply: multiply,
-  };
-}
-
-
-
-
-
-///3-d solution is the most optimal 
-function countAndPrint(num) {
-  if (typeof num !== "number") {
-    console.log(" Dear user please input a number");
-    return;
-  }
-    let integer=Math.floor(num)
-  let res =integer.toString();
   let result = res.split("");
   let count = 0;
   let sum = 0;
@@ -111,7 +44,7 @@ function countAndPrint(num) {
 ///226
 function foo1(num) {
   if (typeof num !== "number") {
-    console.log("wrong");
+    console.log("dear user please input a number ");
     return;
   }
   num = num.toString();
