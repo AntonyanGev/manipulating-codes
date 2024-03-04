@@ -105,7 +105,7 @@ function checkNumsEquality (num) {
 
 //229
 
-function foo1(num) {
+function oddNums(num) {
   if (typeof num !== "number") {
     return "please input a number";
   }
