@@ -1,5 +1,5 @@
 
-//221-225 solutions in one function
+//exercises N-221-225 solutions in one function
 function countAndPrint(num) {
   if (typeof num !== "number") {
     console.log(" Dear user please input a number");
@@ -39,9 +39,9 @@ function countAndPrint(num) {
     multiply: multiply,
   };
 }
+countAndPrint(456)
 
-
-///226
+/// exercise N-226
 function reverse (num) {
   if (typeof num !== "number") {
     console.log("dear user please input a number ");
@@ -60,7 +60,9 @@ function reverse (num) {
   return +reversed;
 }
 
-///227
+reverse (789)
+
+/// exercise N-227
 function check(num) {
   if (typeof num !== "number") {
     return "please input a number";
@@ -80,9 +82,9 @@ function check(num) {
   }
 }
 
+check(426)
 
-
-//228
+/// exercise N-228
 
 function checkNumsEquality (num) {
   if (typeof num !== "number") {
@@ -101,9 +103,9 @@ function checkNumsEquality (num) {
   }
   return "is not equal";
 }
+checkNumsEquality (444)
 
-
-//229
+/// exercise N-229
 
 function oddNums(num) {
   if (typeof num !== "number") {
@@ -125,9 +127,9 @@ function oddNums(num) {
   }
   return false;
 }
+oddNums(215)
 
-
-//230
+/// exercise N-230
 
 
 function callBack(odd, even) {
@@ -174,4 +176,67 @@ function checkEquality(num) {
   }
   return callBack(odd, even);
 }
+
+checkEquality(1245)
+
+/// exercise N-281
+/// first solution 
+let arr=[]
+let arr2=[]
+
+function first(arr, arr2, num) {
+  if (isNaN(num)) {
+    return `please input number`;
+  }
+  for (let i = 0; i < num; i++) {
+    arr.push(Math.floor(Math.random() * 100)); 
+    arr2.push(Math.floor(Math.random() * 100));
+  }
+
+  if (arr.length !== num && arr2.length !== num) {
+    return `arrays have a different length`;
+  }
+  let length = arr.length;
+  let sum1 = arr.reduce((sum, item) => {
+    return (sum += item);
+  }, 0);
+  result = sum1 / length;
+  let sum2 = arr2.reduce((sum, item) => {
+    return (sum += item);
+  }, 0);
+  result2 = sum2 / length;
+
+  return result * result2;
+}
+
+foo7(arr, arr2, 5)
+
+
+//////second solution 
+let arr = [4, 8, 9, 7, 45];
+let arr2 = [5, 9, 8, 7, 12];
+
+function second(arr, arr2, num) {
+  if (isNaN(num)) {
+    return `please input number`;
+  }
+
+  if (arr.length !== num && arr2.length !== num) {
+    return `arrays have a different length`;
+  }
+  let length = arr.length;
+  let sum1 = arr.reduce((sum, item) => {
+    return (sum += item);
+  }, 0);
+  result = sum1 / length;
+  let sum2 = arr2.reduce((sum, item) => {
+    return (sum += item);
+  }, 0);
+  result2 = sum2 / length;
+
+  return result * result2;
+}
+
+second(arr,arr2,5)
+
 
