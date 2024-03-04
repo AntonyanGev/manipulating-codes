@@ -5,11 +5,12 @@ function countAndPrint(num) {
     console.log(" Dear user please input a number");
     return;
   }
-     if(num % 1 >= 0.5){
-         num= Math.round(num)
+   if(num % 1 >= 0.5){
+         num= Math.abs(Math.round(num))
      } else{
-         num=Math.floor(num)
+         num=Math.abs(Math.floor(num))
      }
+     
      
   let res = num.toString();
   let result = res.split("");
@@ -47,11 +48,11 @@ function reverse (num) {
     console.log("dear user please input a number ");
     return;
   }
-  if(num % 1 >= 0.5){
-         num= Math.round(num)
-    } else{
-         num=Math.floor(num)
-    }
+   if(num % 1 >= 0.5){
+         num= Math.abs(Math.round(num))
+     } else{
+         num=Math.abs(Math.floor(num))
+     }
   num = num.toString();
   let reversed = "";
   for (let i = num.length - 1; i >= 0; i--) {
@@ -69,9 +70,9 @@ function check(num) {
   }
 
   if (num % 1 >= 0.5) {
-    num = Math.round(num);
+    num = Math.abs(Math.round(num));
   } else {
-    num = Math.floor(num);
+    num = Math.abs(Math.floor(num));
   }
 
   num = num.toString();
@@ -112,10 +113,10 @@ function oddNums(num) {
     return "please input a number";
   }
 
-  if (num % 1 >= 0.5) {
-    num = Math.round(num);
+ if (num % 1 >= 0.5) {
+    num = Math.abs(Math.round(num));
   } else {
-    num = Math.floor(num);
+    num = Math.abs(Math.floor(num));
   }
 
   let result = num.toString();
@@ -156,10 +157,10 @@ function checkEquality(num) {
     return "please input a number";
   }
 
-  if (num % 1 >= 0.5) {
-    num = Math.round(num);
+   if (num % 1 >= 0.5) {
+    num = Math.abs(Math.round(num));
   } else {
-    num = Math.floor(num);
+    num = Math.abs(Math.floor(num));
   }
 
   let result = num.toString();
