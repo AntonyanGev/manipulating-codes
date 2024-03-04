@@ -42,11 +42,16 @@ function countAndPrint(num) {
 
 
 ///226
-function foo1(num) {
+function reverse (num) {
   if (typeof num !== "number") {
     console.log("dear user please input a number ");
     return;
   }
+  if(num % 1 >= 0.5){
+         num= Math.round(num)
+    } else{
+         num=Math.floor(num)
+    }
   num = num.toString();
   let reversed = "";
   for (let i = num.length - 1; i >= 0; i--) {
@@ -60,6 +65,13 @@ function check(num) {
   if (typeof num !== "number") {
     return "please input a number";
   }
+
+  if (num % 1 >= 0.5) {
+    num = Math.round(num);
+  } else {
+    num = Math.floor(num);
+  }
+
   num = num.toString();
   if (num.includes(2)) {
     return true;
@@ -69,27 +81,39 @@ function check(num) {
 }
 
 
+
 //228
 
-function check(num) {
+function checkNumsEquality (num) {
   if (typeof num !== "number") {
     return "Please input a number";
   }
-  const toStr= num.toString();
-
+  if (num % 1 >= 0.5) {
+    num = Math.round(num);
+  } else {
+    num = Math.floor(num);
+  }
+  const toStr = num.toString();
   for (let i = 0; i < toStr.length - 1; i++) {
     if (toStr[i] === toStr[i + 1]) {
       return "is equal";
     }
   }
- return "is not equal";
+  return "is not equal";
 }
+
 
 //229
 
 function foo1(num) {
   if (typeof num !== "number") {
     return "please input a number";
+  }
+
+  if (num % 1 >= 0.5) {
+    num = Math.round(num);
+  } else {
+    num = Math.floor(num);
   }
 
   let result = num.toString();
@@ -101,6 +125,7 @@ function foo1(num) {
   }
   return false;
 }
+
 
 //230
 
@@ -127,6 +152,12 @@ function callBack(odd, even) {
 function checkEquality(num) {
   if (typeof num !== "number") {
     return "please input a number";
+  }
+
+  if (num % 1 >= 0.5) {
+    num = Math.round(num);
+  } else {
+    num = Math.floor(num);
   }
 
   let result = num.toString();
