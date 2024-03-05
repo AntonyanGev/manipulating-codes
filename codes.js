@@ -348,3 +348,33 @@ let result= arrLength.length + arr2Length.length
              
 }
 negative (arr =[],arr2=[],5)
+
+
+//exercise 285
+
+
+function divide(arr, arr2, num) {
+  if (isNaN(num)) {
+    return `please input number`;
+  }
+  for (let i = 0; i < num; i++) {
+    arr.push(Math.floor(Math.random() * 100));
+    arr2.push(Math.floor(Math.random() * 100));
+  }
+
+  if (
+    (arr.length !== num || arr2.length !== num) &&
+    (arr.includes(0) || arr2.includes(0))
+  ) {
+    return `arrays have a different length or includes 0`;
+  }
+
+  let result1 = arr.reduce((sum, item) => {
+    return (sum += item);
+  }, 0);
+  let result2 = arr2.reduce((multiply, item) => {
+    return (multiply *= item);
+  }, 1);
+  return result1 / result2;
+}
+divide((arr = []), (arr2 = []), 5);
