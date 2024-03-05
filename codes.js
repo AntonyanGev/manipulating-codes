@@ -210,7 +210,7 @@ function first(arr, arr2, num) {
   return result * result2;
 }
 
-foo7(arr, arr2, 5)
+first(arr, arr2, 5)
 
 
 //////second solution 
@@ -241,12 +241,110 @@ function second(arr, arr2, num) {
 second(arr,arr2,5)
 
 ///exercise 282
-function foo(arr){
-    let leng= arr.length
-    let sum=0
-        for(let i=0;i<arr.length;i++){
-        sum= sum+ arr[i]**2
-        }
-    
-   return Math.sqrt(sum/leng)
+let arr=[]
+let arr2=[]
+
+function squares(arr, arr2, num) {
+  if (isNaN(num)) {
+    return `please input number`;
+  }
+  for (let i = 0; i < num; i++) {
+    arr.push(Math.floor(Math.random() * 100)); 
+    arr2.push(Math.floor(Math.random() * 100));
+  }
+
+  if (arr.length !== num && arr2.length !== num) {
+    return `arrays have a different length`;
+  }
+  let length = arr.length;
+  let sum1 = arr.reduce((sum, item) => {
+    return (sum += item**2);
+  }, 0);
+  result = Math.sqrt(sum1 / length);
+  let sum2 = arr2.reduce((sum, item) => {
+    return (sum += item**2);
+  }, 0);
+  result2 = Math.sqrt(sum2 / length);
+
+  return result + result2;
 }
+
+squares (arr,arr2, 4)
+
+
+///exercise 283 positive
+let arr=[]
+let arr2=[]
+
+function positive(arr, arr2, num) {
+  if (isNaN(num)) {
+    return `please input number`;
+  }
+  for (let i = 0; i < num; i++) {
+    arr.push(Math.floor(Math.random() * (100 - (-100) + 1)) + (-100));
+    arr2.push(Math.floor(Math.random() * (100 - (-100) + 1)) + (-100));
+  }
+
+  if (arr.length !== num || arr2.length !== num) {
+    return `arrays have a different length`;
+      
+  }
+    let arrLength=[]
+    let arr2Length=[]
+ arr.forEach((item)=>  {
+     if(item >= 0){
+         arrLength.push(item)
+     }
+     return arrLength
+ })                                       
+arr2.forEach((item)=>{
+    if(item >= 0){
+         arr2Length.push(item)
+     }
+     return arr2Length
+})                                           
+    
+let result= arrLength.length + arr2Length.length
+    return result
+             
+}
+positive (arr,arr2,5)
+
+///If we want to check it multiple times and ensure it's always valid or correct, we can call it this way `positive(arr =[],arr2=[],5)
+
+
+///exercise 284  negative 
+
+function negative(arr, arr2, num) {
+  if (isNaN(num)) {
+    return `please input number`;
+  }
+  for (let i = 0; i < num; i++) {
+    arr.push(Math.floor(Math.random() * (100 - (-100) + 1)) + (-100));
+    arr2.push(Math.floor(Math.random() * (100 - (-100) + 1)) + (-100));
+  }
+
+  if (arr.length !== num && arr2.length !== num) {
+    return `arrays have a different length`;
+      
+  }
+    let arrLength=[]
+    let arr2Length=[]
+ arr.forEach((item)=>  {
+     if(item <= 0){
+         arrLength.push(item)
+     }
+     return arrLength
+ })                                       
+arr2.forEach((item)=>{
+    if(item <= 0){
+         arr2Length.push(item)
+     }
+     return arr2Length
+})                                           
+    
+let result= arrLength.length + arr2Length.length
+    return result
+             
+}
+negative (arr =[],arr2=[],5)
