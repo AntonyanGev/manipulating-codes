@@ -240,4 +240,13 @@ function second(arr, arr2, num) {
 
 second(arr,arr2,5)
 
-
+///exercise 282
+function foo(arr){
+    let leng= arr.length
+    let sum=0
+        for(let i=0;i<arr.length;i++){
+        sum= sum+ arr[i]**2
+        }
+    
+   return Math.sqrt(sum/leng)
+}
