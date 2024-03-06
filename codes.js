@@ -378,3 +378,114 @@ function divide(arr, arr2, num) {
   return result1 / result2;
 }
 divide((arr = []), (arr2 = []), 5);
+
+
+///exercise 286
+
+
+function divElem(arr, arr2, num) {
+    debugger
+  if (isNaN(num)) {
+    return `please input number`;
+  }
+  for (let i = 0; i < num; i++) {
+    arr.push(Math.floor(Math.random() * 100))
+    arr2.push(Math.floor(Math.random() * 100))
+  }
+
+  if (arr.length !== num || arr2.length !== num) {
+    return `arrays have a different length`;
+      
+  }
+    
+ let result1=arr.reduce((sum,item)=>{
+    if(item%2!== 0){
+        sum+= item
+     }
+     return sum
+},0)                                                  
+let result2=arr2.reduce((sum,item)=>{
+    if(item %2 === 0){
+        sum+= item
+     }
+     return sum
+},0)                                           
+    
+let result= result1/result2
+    return result
+             
+}
+divElem (arr,arr2,5)
+
+
+///exercise 287
+function divSeven(arr, arr2, num) {
+  if (isNaN(num)) {
+    return `please input number`;
+  }
+  for (let i = 0; i < num; i++) {
+    arr.push(Math.floor(Math.random() * 100))
+    arr2.push(Math.floor(Math.random() * 100))
+  }
+
+  if (arr.length !== num || arr2.length !== num) {
+    return `arrays have a different length`;
+      
+  }
+    
+ let result1=arr.reduce((sum,item)=>{
+    if(item%7=== 0){
+        sum+= item
+     }
+     return sum
+},0)                                                  
+let result2=arr2.reduce((sum,item)=>{
+    if(item %7=== 0){
+        sum+= item
+     }
+     return sum
+},0)                                           
+    
+let result= result1+result2
+    return result
+             
+}
+
+divSeven(arr=[],arr2=[],5)
+
+///second solution for clearity
+
+let arr=[14,49,55,87]
+let arr2=[49,55,72,100]
+
+function divSeven(arr, arr2, num) {
+  if (isNaN(num)) {
+    return `please input number`;
+  }
+ 
+  if (arr.length !== num || arr2.length !== num) {
+    return `arrays have a different length`;
+      
+  }
+    
+ let result1=arr.reduce((sum,item)=>{
+    if(item%7=== 0){
+        sum+= item
+     }
+     return sum
+},0)                                                  
+let result2=arr2.reduce((sum,item)=>{
+    if(item %7=== 0){
+        sum+= item
+     }
+     return sum
+},0)                                           
+    
+let result= result1+result2
+    return result
+             
+}
+
+divSeven(arr,arr2,4)
+
+
