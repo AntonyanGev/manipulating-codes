@@ -489,3 +489,6 @@ let result= result1+result2
 divSeven(arr,arr2,4)
 
 
+///  exercise 288
+
+
