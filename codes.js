@@ -491,4 +491,101 @@ divSeven(arr,arr2,4)
 
 ///  exercise 288
 
+function divToK(arr, arr2, num,k) {
+  if (isNaN(num)) {
+    return `please input number`;
+  }
+  for (let i = 0; i < num; i++) {
+    arr.push(Math.floor(Math.random() * 100))
+    arr2.push(Math.floor(Math.random() * 100))
+  }
 
+  if (arr.length !== num || arr2.length !== num) {
+    return `arrays have a different length`;
+      
+  }
+    
+ let result1=arr.reduce((sum,item)=>{
+    if(item% k === 0){
+        sum.push(item)
+     }
+     return sum
+},[])                                                  
+let result2=arr2.reduce((sum,item)=>{
+    if(item % k=== 0){
+        sum.push(item)
+     }
+     return sum
+},[])                                           
+    
+let result= result1.length+result2.length
+    return result
+             
+}
+divToK(arr=[],arr2=[],5,2)
+
+
+
+
+///exercise 289
+
+function elemIndexSum(arr, arr2, num) {
+  if (isNaN(num)) {
+    return `please input number`;
+  }
+  for (let i = 0; i < num; i++) {
+    arr.push(Math.floor(Math.random() * 100));
+    arr2.push(Math.floor(Math.random() * 100));
+  }
+
+  if (arr.length !== num || arr2.length !== num) {
+    return `arrays have a different length`;
+  }
+
+  let result1 = arr.filter(
+    (item) => arr.indexOf(item) % 2 === 0 && arr.indexOf(item) !== 0
+  );
+
+  let result2 = arr2.filter((item) => arr2.indexOf(item) % 2 !== 0);
+
+  let result = Number(result1) + Number(result2);
+  return result;
+}
+elemIndexSum((arr = []), (arr2 = []), 3);
+
+
+
+
+
+/// exercise 290
+
+
+function toSqrt(arr, arr2, num) {
+  if (isNaN(num)) {
+    return `please input number`;
+  }
+  for (let i = 0; i < num; i++) {
+    arr.push(Math.floor(Math.random() * 100))
+    arr2.push(Math.floor(Math.random() * 100))
+  }
+
+  if (arr.length !== num || arr2.length !== num) {
+    return `arrays have a different length`;
+      
+  }
+    
+ let result1=arr.reduce((sum,item)=>{
+    sum= sum + (item**2)
+     return sum
+},0)                                                  
+let result2=arr2.reduce((sum,item)=>{
+    sum= sum + (item**2)
+     return sum
+     
+},0)                                           
+    
+let result= result1 + result2
+    return result
+             
+}
+toSqrt(arr=[],arr2=[],3)
