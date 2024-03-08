@@ -194,7 +194,7 @@ function first(arr, arr2, num) {
     arr2.push(Math.floor(Math.random() * 100));
   }
 
-  if (arr.length !== num && arr2.length !== num) {
+  if (arr.length !== num || arr2.length !== num) {
     return `arrays have a different length`;
   }
   let length = arr.length;
@@ -222,7 +222,7 @@ function second(arr, arr2, num) {
     return `please input number`;
   }
 
-  if (arr.length !== num && arr2.length !== num) {
+  if (arr.length !== num || arr2.length !== num) {
     return `arrays have a different length`;
   }
   let length = arr.length;
@@ -253,7 +253,7 @@ function squares(arr, arr2, num) {
     arr2.push(Math.floor(Math.random() * 100));
   }
 
-  if (arr.length !== num && arr2.length !== num) {
+  if (arr.length !== num || arr2.length !== num) {
     return `arrays have a different length`;
   }
   let length = arr.length;
@@ -324,7 +324,7 @@ function negative(arr, arr2, num) {
     arr2.push(Math.floor(Math.random() * (100 - (-100) + 1)) + (-100));
   }
 
-  if (arr.length !== num && arr2.length !== num) {
+  if (arr.length !== num || arr2.length !== num) {
     return `arrays have a different length`;
       
   }
