@@ -625,3 +625,36 @@ function vectorY(n, x) {
     return y;
 }
 vectorY(6,[4,8,-2,6,9,8])
+
+///333
+
+function vectorChange(n, x) {
+    let y = [];
+    for (let i = 0; i < n; i++) {
+        if (i % 2 === 0) {
+            if (i > 0) {
+                y[i] = x[i] + x[i - 1];
+                y[i - 1] = x[i] + x[i - 1];
+            } else {
+                y[i] = x[i];
+            }
+        }
+    }
+    return y;
+}
+vectorChange(6,[9,5,9,2,6,8])
+
+///334
+function foo(x){
+    let y=[]
+    x.forEach((item)=>{
+            y.push(item);
+        if (item > 0) {
+            y.push(0);
+        }
+    })
+    return y;
+    }
+foo([3,5,-8,7,4,-1,6])
+
+///335
