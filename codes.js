@@ -589,3 +589,39 @@ let result= result1 + result2
              
 }
 toSqrt(arr=[],arr2=[],3)
+
+///331
+
+
+function Vektor(arr1, arr2) {
+  debugger;
+  let max = Math.max(...arr1);
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] > 0) {
+      arr2.push(max + arr1[i]);
+    }
+  }
+  return arr2;
+}
+
+Vektor([4,5,8,9],[])
+
+///332
+
+function vectorY(n, x) {
+    debugger
+    let y = [];
+    for (let i = 0; i < n; i += 2) {
+        if (i + 1 < n) {
+            if (Math.abs(x[i]) > Math.abs(x[i + 1])) {
+                y.push(x[i]);
+            } else {
+                y.push(x[i + 1]);
+            }
+        } else {
+            y.push(x[i]);
+        }
+    }
+    return y;
+}
+vectorY(6,[4,8,-2,6,9,8])
