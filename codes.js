@@ -658,3 +658,86 @@ function foo(x){
 foo([3,5,-8,7,4,-1,6])
 
 ///335
+function fillY(n, x, b) {
+    const include = x.includes(b);
+    
+    let y;
+    if (include) {
+        y = x.filter(element => element > 0 && element !== b);
+    } else {
+        y = x.filter(element => element < 0);
+    }
+    
+    return y;
+}
+
+
+const n = 6; 
+const x = [-3, 2, 5, -4, 1, 6]; 
+const b = 2; 
+fillY(n,x,b)
+
+///336
+function vectorY(n, x) {
+    const max = Math.max(...x);
+    const min = Math.min(...x);
+    const mean = (max + min) / 2;
+
+ 
+    const arry = x.filter(element => Math.abs(element) < mean);
+
+    return arry;
+}
+
+vectorY(6, [3,-1,9,8,6]);
+
+///353
+
+function fillVectorY(n, x, k) {
+    let y = [];
+    for (let i = 1; i < n - 1; i++) {
+        let sum = x[i - 1] + x[i + 1];
+        if (sum < k) {
+            y.push(x[i]);
+        }
+    }
+    return y;
+}
+fillVectorY(8,[4,8,9,6,2,1,4,18,],9)
+
+///354
+
+function obtainY2(n, x) {
+    const positives = x.filter(element => element > 0).reduce((acc, val) => acc + val, 0);
+    const largestElementIndex = x.indexOf(Math.max(...x));
+    
+    let y;
+    if (largestElementIndex <= n / 2) {
+        y = [positives];
+    } else {
+        const productOfNegatives = x.filter(element => element < 0).reduce((acc, val) => acc * val, 1);
+        y = [productOfNegatives];
+    }
+    
+    return y;
+}
+obtainY2(5,[8,-9,5,4,28])
+
+///356
+
+function printLargest(n, x) {
+    const negativeNumber = x.some(element => element < 0);
+    const largestNumber = Math.max(...x);
+    
+    let arry;
+    if (negativeNumber) {
+        arry = [largestNumber];
+    } else {
+        arry = [0];
+    }
+    
+    return arry;
+}
+
+printLargest(6,[9,-1,8,-4,1,7])
+
